@@ -10,12 +10,6 @@ services:
       - .postgres:/var/lib/postgresql/data
   api:
     build: .
-    environment:
-      - NODE_ENV=development
-      - DATABASE_HOST=postgres
-      - DATABASE_PORT=5432
-      - DATABASE_NAME=postgres
-      - DATABASE_USERNAME=postgres
     ports:
       - "3000:3000"
     volumes:
