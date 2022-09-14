@@ -7,5 +7,26 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("DB_URL")
+}
+
+model Client {
+  client_id     String @id @default(cuid())
+  client_secret String
+}
+
+model Employee {
+  CPF      String @id
+  A_FILIAL String @default("01")
+  A_MAT    String @unique @default(cuid())
+  A_NOME   String
+  DADM     String
+  FONE     String
+  MAE      String
+  MAIL     String @unique
+  NASC     String
+  PAI      String
+  RG       String
+  SEXO     String
+  SIT      String @default("")
 }

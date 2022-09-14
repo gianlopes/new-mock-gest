@@ -4,8 +4,8 @@ WORKDIR /app
 
 COPY . .
 
+RUN apk add netcat-openbsd
+
 RUN yarn install
 
-EXPOSE 3000
-
-CMD ["yarn", "start:dev"]
+CMD ["sh", "entrypoint.sh"]
