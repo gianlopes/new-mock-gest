@@ -12,7 +12,7 @@ async function bootstrap() {
     })
   );
   const configService = app.get(ConfigService);
-  const PORT = configService.get<number>('APP_PORT');
+  const PORT = configService.get<number>('PORT');
   console.log(`Listening on port ${PORT}`);
   await app.listen(PORT);
 }
