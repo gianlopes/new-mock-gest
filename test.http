@@ -1,0 +1,24 @@
+### needs vscode extension Rest Client
+
+GET http://localhost:3001/
+
+###
+POST http://localhost:3001/oauth2/token HTTP/1.1
+content-type: application/json
+
+{
+    "client_id": "client_id",
+    "client_secret": "oauthsecret"
+}
+
+###
+
+POST http://localhost:3000/resource/v1/protheus/employee HTTP/1.1
+content-type: application/json
+Authorization: Bearer COPY_TOKEN_HERE
+
+{
+    "cpf": "05785771195"
+}
+
+###
