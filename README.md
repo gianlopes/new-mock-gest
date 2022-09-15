@@ -41,6 +41,12 @@ $ yarn install
 $ yarn prisma migrate dev
 ```
 
+### Seed database
+
+```bash
+$ yarn prisma db seed
+```
+
 ### Start the app
 
 ```bash
