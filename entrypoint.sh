@@ -9,9 +9,17 @@ until nc -z -v -w30 $DB_HOST $DB_PORT; do
 done
 echo "PostgreSQL is up and running!"
 
-yarn prisma migrate deploy
+# prod
+# yarn prisma migrate deploy
+
+# dev
+yarn prisma migrate dev
 
 echo "PostgreSQL database has been created & migrated!"
 
-yarn build
-yarn start:prod
+# prod
+# yarn build
+# yarn start:prod
+
+# dev
+yarn start:dev
